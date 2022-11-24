@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* Start Variables */
+:root {
+    --Primary-Soft-blue: hsl(215, 51%, 70%);
+    --Primary-Cyan: hsl(178, 100%, 50%);
+    --NeutralVery-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --NeutralVery-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --NeutralVery-dark-blue-line: hsl(215, 32%, 27%);
+    --NeutralWhite: hsl(0, 0%, 100%);
+    --main-transition: 0.3s;
+
+}
+/* End Variables */
+/* Start Gobal Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+}
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--Primary-Soft-blue);
+    height: 100vh;
+    background-color: var(--NeutralVery-dark-blue-main-BG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* End Gobal Rules */
+/* Start Card */
+main {
+    margin-bottom: 10px;
+}
+.card {
+    padding: 20px;
+    background-color: var(--NeutralVery-dark-blue-card-BG);
+    width: 350px;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 10px 10px 15px 10px rgb(0 0 0 / 20%), -10px -10px 15px 10px rgb(0 0 0 / 20%);
+}
+.card .image {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.card .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 310px;
+    background-color: var(--Primary-Cyan);
+    opacity: 0.5;
+    border-radius: 10px;
+    display: none;
+    transition: var(--main-transition);
+}
+.card .image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    color: var(--NeutralWhite);
+    z-index: 1;
+    display: none;
+    transition: var(--main-transition);
+}
+.card .image:hover::before,
+.card .image:hover::after {
+    display: block;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    
+}
+.card h1 {
+    color: var(--NeutralWhite);
+    font-size: 1.2em;
+    transition: var(--main-transition);
+    cursor: pointer;
+    width: fit-content;
+}
+.card h1:hover {
+    color: var(--Primary-Cyan);
+}
+.card p {
+    color: var(--Primary-Soft-blue);
+    font-weight: lighter;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.card .price-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--NeutralVery-dark-blue-line);
+}
+.card .price-time .price,
+.card .price-time .time {
+    display: flex;
+    align-items: center;
+}
+.card .price-time .price {
+    color: var(--Primary-Cyan);
+}
+.card .price-time .time {
+    font-weight: lighter;
+}
+.card .price-time .price img,
+.card .price-time .time img {
+    margin-right: 7px;
+}
+.card .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+.card .author img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--NeutralWhite);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.card .author span {
+    color: var(--NeutralWhite);
+    font-weight: lighter;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.card .author span:hover {
+    color: var(--Primary-Cyan);
+}
+/* End Card */
