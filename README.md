@@ -15,12 +15,12 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 ## Overview
 ### Screenshot
 
-[Screenshot](images/screenshot.jpg)
+[Screenshot](images/screenshot.png)
 
 ### Links
 
 - Solution URL: [Github](https://github.com/oussamaelomri/nftproject.github.io)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Live Site URL: [Live](https://oussamaelomri.github.io/nftproject.github.io/)
 
 ## My process
 
